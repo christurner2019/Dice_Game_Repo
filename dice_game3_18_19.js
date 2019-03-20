@@ -71,8 +71,9 @@ function rollDie(n){
 
 
 function runGame(){
-	console.log("Welcome to my game! This is a 2 player game. Each player will roll a total of 5 times. 6 dice, ranging from 4 faces to 9 faces,  will roll each time.\
-				 The total of all rolls will result in a players score." +" Highest score wins.");  
+	console.log("Welcome to my game! This is a 2 player game. Each player will roll a total of 5 times. 6 dice, " + 
+		"ranging from 4 faces to 9 faces, will roll each time." +
+		" The total of all rolls will result in a players score."+" Highest score wins.");  
 	//rules maybe
 
 	//player1 turn x 5
@@ -80,7 +81,25 @@ function runGame(){
 
 	let player2Rolls = fiveDiceRolls(2);
 
-		console.log(Math.max(player1Rolls, player2Rolls));
+	if (player1Rolls > player2Rolls){
+		console.log("Player 1 wins!");
+	 }
+	else if (player2Rolls > player1Rolls)
+	{
+		console.log("Player 2 wins!")
+	}
+	
+	 
+	else if (player1Rolls = player2Rolls){
+	
+		console.log("It is a tie!");
+	}
+
+	}
+	
+
+
+		//console.log(Math.max(player1Rolls, player2Rolls));
 
 	//player2 turn x 5
 
@@ -94,5 +113,20 @@ function runGame(){
 	//will player2 have to initiate anything, or do we just refresh page and cycle through both throws? much simpler to cycle both players roll all with one refresh. 
 	//player1 and player2 can decide which one they want to be before hitting refresh to determine who is who.
 
-}
+
 runGame();
+
+
+// {
+// let output  = [];
+// 	output.push(1++);
+// 	console.log(output);
+
+
+// }
+
+
+
+
+
+
